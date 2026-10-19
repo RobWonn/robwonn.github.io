@@ -95,8 +95,16 @@
     letter-spacing: 0.08em;
     vertical-align: 0.35em;
   }
-  .role { margin: 14px 0 0; color: var(--muted); font-size: 1.02rem; }
+  .role { margin: 12px 0 0; color: var(--muted); font-size: 1.02rem; line-height: 1.55; }
   .nw { white-space: nowrap; }
+  .ident { display: flex; align-items: center; gap: 22px; }
+  .avatar {
+    width: 112px; height: 112px; flex: none;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--surface);
+    box-shadow: var(--shadow);
+  }
   .bio { margin: 22px 0 0; font-size: 1.06rem; max-width: 600px; }
   .bio strong { font-weight: 600; }
   .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
@@ -261,7 +269,9 @@
     .two { grid-template-columns: 1fr; }
   }
   @media (max-width: 600px) {
-    .name { font-size: 2.4rem; }
+    .name { font-size: 2.2rem; }
+    .ident { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .avatar { width: 96px; height: 96px; }
     .pub { grid-template-columns: 1fr; gap: 14px; }
     .thumb { max-width: 360px; }
     .news li { grid-template-columns: 1fr; gap: 2px; }
@@ -274,8 +284,13 @@
 
 <header class="hero">
   <div>
-    <h1 class="name">Wang Luo<span class="zh" lang="zh-CN">罗旺</span></h1>
-    <p class="role">Ph.D. student in Computer Science · <span class="nw">Sun Yat-sen University</span>, Guangzhou</p>
+    <div class="ident">
+      <img class="avatar" src="img/photo.webp" alt="Photo of Wang Luo" width="192" height="192">
+      <div>
+        <h1 class="name">Wang Luo<span class="zh" lang="zh-CN">罗旺</span></h1>
+        <p class="role">Ph.D. student in Computer Science<br><span class="nw">Sun Yat-sen University</span>, Guangzhou</p>
+      </div>
+    </div>
     <p class="bio">I work on <strong>LLM reasoning under conflicting evidence</strong> and on <strong>self-improving agents</strong>, with applications in <strong>medical decision making</strong>. I also work on <strong>spatial intelligence</strong>: 3D completion with image, language and world-model priors. I am advised by Prof. Di Wu, and was a research intern at Tencent Hunyuan in 2026.</p>
     <nav class="links" aria-label="Contact and profiles">
       <a class="btn" href="mailto:luow69@mail2.sysu.edu.cn">
