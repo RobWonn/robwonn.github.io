@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wang Luo</title>
+<meta name="description" content="Wang Luo, Ph.D. student at Sun Yat-sen University. LLM reasoning under conflicting evidence, self-improving agents for medical decision making, and spatial intelligence.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #262626;
+    --muted: #6b776f;
+    --accent: #005826;
+    --deep: #0b3b24;
+    --venue: #b30216;
+    --rule: #d6e6dc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141816;
+      --text: #e4e8e5;
+      --muted: #9aa7a0;
+      --accent: #6cc58f;
+      --deep: #b9e3c8;
+      --venue: #ff7b86;
+      --rule: #2c3a32;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Lato, Roboto, "Helvetica Neue", Arial, "Noto Sans CJK SC", "PingFang SC", sans-serif;
+  }
+  main { max-width: 780px; margin: 0 auto; padding: 48px 16px 64px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header h1 { margin: 0; font-size: 2.1rem; line-height: 1.2; color: var(--deep); }
+  header h1 .zh { font-size: 1.2rem; font-weight: 400; color: var(--muted); margin-left: 8px; }
+  header .role { margin: 6px 0 10px; color: var(--muted); }
+  header .links { display: flex; flex-wrap: wrap; gap: 6px 18px; font-weight: 600; }
+  h2 {
+    margin: 40px 0 12px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--rule);
+    font-size: 1.15rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  h3 { margin: 20px 0 4px; font-size: 1rem; color: var(--deep); }
+  p { margin: 0 0 12px; }
+  ul { margin: 0; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  .news li { list-style: none; margin-left: -20px; display: grid; grid-template-columns: 82px 1fr; }
+  .date { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .pubs { padding-left: 0; list-style: none; }
+  .pubs li { margin-bottom: 14px; }
+  .pubs .title { font-weight: 600; }
+  .pubs .authors { color: var(--text); }
+  .me { font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+  .venue { font-weight: 700; color: var(--venue); }
+  .status { color: var(--muted); }
+  .note { font-size: 0.88rem; color: var(--muted); }
+  .row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .row .when { color: var(--muted); white-space: nowrap; }
+  footer { margin-top: 48px; font-size: 0.85rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Wang Luo<span class="zh" lang="zh-CN">罗旺</span></h1>
+  <p class="role">Ph.D. student, School of Computer Science and Engineering, Sun Yat-sen University, Guangzhou</p>
+  <nav class="links">
+    <a href="mailto:luow69@mail2.sysu.edu.cn">Email</a>
+    <a href="https://scholar.google.com/citations?user=4zsX8wQAAAAJ">Google Scholar</a>
+    <a href="Wang_Luo_CV.pdf">CV</a>
+  </nav>
+</header>
+
+<section>
+  <h2>About</h2>
+  <p>I work on LLM reasoning under conflicting evidence and on self-improving agents, with applications in medical decision making. I also work on spatial intelligence: 3D completion and world models.</p>
+  <p>I am a Ph.D. student at Sun Yat-sen University, advised by Prof. Di Wu. I was a research intern at Tencent Hunyuan in 2026. I received my B.Eng. from Jilin University in 2024.</p>
+</section>
+
+<section>
+  <h2>News</h2>
+  <ul class="news">
+    <li><span class="date">Oct 2026</span> Presenting FaDe at EMNLP 2026 in Budapest (Oral, Paper Award Nomination).</li>
+    <li><span class="date">2026</span> Papers accepted at EMNLP 2026 and ACM MM 2026, and co-authored papers at NeurIPS 2026 and EMNLP 2026.</li>
+    <li><span class="date">2025</span> PGNet accepted at AAAI 2026.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Research</h2>
+
+  <h3>Format-robust evidence reasoning in LLMs</h3>
+  <p>LLMs resolving knowledge conflicts change their preference when the same evidence is rendered as text, tables or knowledge graphs. FaDe treats format as a nuisance variable and distills format-marginalized teacher targets into a student. In medicine, PMC-ConForm varies evidence source and format independently, and ForMeDER reduces the resulting preference shift on 8 LLMs without external labels.</p>
+
+  <h3>Self-improving clinical diagnosis agents (ongoing)</h3>
+  <p>Interactive diagnosis agents that take history, order tests and diagnose on MIMIC-IV emergency department cases, and revise their own diagnostic harness from their errors. The question is whether such self-improvement holds on unseen patients.</p>
+
+  <h3>Spatial intelligence: multimodal and streaming 3D completion</h3>
+  <p>PGNet corrects an image-to-3D shape prior in feature space. CRCNet routes VLM-generated part phrases to vision prototypes for point-wise refinement. BelieveSSC reads the semantic composition of a world model's belief to guide semantic scene completion. CommitStream and the OrbitScan benchmark study the reliability of streaming completion.</p>
+</section>
+
+<section>
+  <h2>Publications</h2>
+  <p class="note">* equal contribution</p>
+
+  <h3>First-author</h3>
+  <ul class="pubs">
+    <li>
+      <span class="title">Format as Nuisance: Intervention-Inspired Cross-Format Distillation for Knowledge Conflicts</span><br>
+      <span class="authors">Yue Yu*, <span class="me">Wang Luo</span>*, Shenghao Ye, Zepeng Bao, Jiacheng Liu, Yongqi Li, Wenxin Tang, Tieyun Qian</span><br>
+      <span class="venue">EMNLP 2026 Main, Oral, Paper Award Nomination</span>
+    </li>
+    <li>
+      <span class="title">Beyond Presentation: Toward Format-Robust Medical Evidence Reasoning in LLMs</span><br>
+      <span class="authors"><span class="me">Wang Luo</span>, Hongyu Chen, Di Wu, Yinlin Zhu, Hengyuan Na, Shenghao Ye, Yue Yu, Wei-Jin Huang, Miao Hu, Guocong Quan</span><br>
+      <span class="status">Under review</span>
+    </li>
+    <li>
+      <span class="title">Rethinking Multimodal Point Cloud Completion: A Completion-by-Correction Perspective</span><br>
+      <span class="authors"><span class="me">Wang Luo</span>, Di Wu, Hengyuan Na, Yinlin Zhu, Miao Hu, Guocong Quan</span><br>
+      <span class="venue">AAAI 2026</span>
+    </li>
+    <li>
+      <span class="title">Compose, Route, Complete: Text-Routed Vision Prototypes for Multimodal Point Cloud Completion</span><br>
+      <span class="authors"><span class="me">Wang Luo</span>, Di Wu, Hengyuan Na, Yinlin Zhu, Shenghao Ye, Miao Hu, Guocong Quan</span><br>
+      <span class="venue">ACM MM 2026</span>
+    </li>
+    <li>
+      <span class="title">Believe, Then Complete: Reading a World Model's Belief for Semantic Scene Completion</span><br>
+      <span class="authors"><span class="me">Wang Luo</span>, Di Wu, Jiahao Li, Yinlin Zhu, Hengyuan Na, Shenghao Ye, Yuqi Wang</span><br>
+      <span class="status">Under review</span>
+    </li>
+    <li>
+      <span class="title">Towards Reliable Streaming Point Cloud Completion: A Benchmark and a Training-Free Commitment Operator</span><br>
+      <span class="authors"><span class="me">Wang Luo</span>, Di Wu, Yinlin Zhu, Hengyuan Na, Shenghao Ye, Wei-Jin Huang, Miao Hu, Guocong Quan</span><br>
+      <span class="status">Under review</span>
+    </li>
+    <li>
+      <span class="title">A Survey of Deep Point Cloud Completion: Prior Sources, Benchmarks, and Open Challenges</span><br>
+      <span class="authors"><span class="me">Wang Luo</span>, Di Wu, Xianzhi Zhang, Yinlin Zhu, Hengyuan Na, Hongyu Chen, Shenghao Ye, Wenxin Tang, Miao Hu, Guocong Quan</span><br>
+      <span class="status">Under review</span>
+    </li>
+  </ul>
+
+  <h3>Co-authored</h3>
+  <ul class="pubs">
+    <li><span class="title">Rubric-Guided Process Reward for Stepwise Model Routing</span><br><span class="venue">EMNLP 2026 Main</span></li>
+    <li><span class="title">Rethinking Stepwise Model Routing: A Cost-Efficient Table Reasoning Perspective</span><br><span class="venue">EMNLP 2026 Main</span></li>
+    <li><span class="title">DCVD: Dual-Channel Cross-Modal Fusion for Joint Vulnerability Detection and Localization</span><br><span class="venue">NeurIPS 2026</span></li>
+    <li><span class="title">NTIRE 2025 Challenge on Short-form UGC Video Quality Assessment and Enhancement: Methods and Results</span><br><span class="venue">CVPR 2025 Workshops</span></li>
+    <li><span class="title">Rep-Bicubic++: Enabling 8K Real-Time Super-Resolution on Edge Devices</span><br><span class="venue">IEEE EdgeCom 2025</span></li>
+  </ul>
+  <p class="note">The full list, including preprints, is on <a href="https://scholar.google.com/citations?user=4zsX8wQAAAAJ">Google Scholar</a>.</p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <div class="row"><strong>Tencent Hunyuan</strong><span class="when">Jan 2026 – Apr 2026</span></div>
+  <p>Research Intern. Used a pretrained world model to supply occluded-region context for point cloud semantic scene completion (BelieveSSC).</p>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="row"><strong>Sun Yat-sen University</strong><span class="when">2024 – present</span></div>
+  <p>Ph.D. in Computer Science (direct entry), advised by Prof. Di Wu</p>
+  <div class="row"><strong>Jilin University</strong><span class="when">2020 – 2024</span></div>
+  <p>B.Eng. in Software Engineering</p>
+</section>
+
+<section>
+  <h2>Honors</h2>
+  <ul>
+    <li>Paper Award Nomination (Oral), EMNLP 2026</li>
+    <li>First-Class Scholarship, Sun Yat-sen University, 2024 and 2026</li>
+    <li>National Scholarship, Ministry of Education of China, 2021–2022</li>
+    <li>First-Class Scholarship, Jilin University, four times, 2020–2024</li>
+  </ul>
+</section>
+
+<footer>Last updated October 2026.</footer>
+
+</main>
+</body>
+</html>
